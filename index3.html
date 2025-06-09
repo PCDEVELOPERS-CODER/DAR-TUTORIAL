@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DAR App Tutorial</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #f0f4f8, #e6ecf0);
@@ -31,30 +28,10 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-top: 20px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin-bottom: 25px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-      color: #444;
-      line-height: 1.6;
-    }
+    h1 { text-align: center; font-size: 28px; color: #333; margin-bottom: 15px; }
+    h2 { font-size: 22px; margin-top: 20px; margin-bottom: 12px; color: #333; }
+    ul { padding-left: 20px; margin-bottom: 25px; }
+    ul li { margin-bottom: 10px; color: #444; line-height: 1.6; }
 
     .feature {
       display: flex;
@@ -71,20 +48,14 @@
       transition: transform 0.3s ease;
     }
 
-    .icon-img:hover {
-      transform: scale(1.1);
-    }
+    .icon-img:hover { transform: scale(1.1); }
 
-    .description {
-      flex-grow: 1;
-    }
-
+    .description { flex-grow: 1; }
     .description h3 {
       margin: 0 0 6px 0;
       font-size: 18px;
       color: #222;
     }
-
     .description p {
       margin: 0;
       color: #555;
@@ -92,13 +63,12 @@
       line-height: 1.4;
     }
 
-    .center-button {
+    .center-button, .responsive-button-container {
       text-align: center;
       margin-top: 30px;
     }
 
-    .next-button {
-      background-color: #4CAF50;
+    .next-button, .next1-button {
       color: white;
       padding: 12px 30px;
       font-size: 16px;
@@ -109,49 +79,35 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    .next-button { background-color: #649ce6; }
     .next-button:hover {
-      background-color: #45a049;
+      background-color: #649ce6;
       transform: translateY(-2px);
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     }
 
-    .next-button:active {
-      transform: scale(0.96);
+    .next1-button { background-color: #438359; }
+    .next1-button:hover {
+      background-color: #3a754f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     }
 
-    .page {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .active {
-      display: block;
-      opacity: 1;
-    }
+    .page { display: none; opacity: 0; transition: opacity 0.4s ease; }
+    .active { display: block; opacity: 1; }
 
     .page-indicator {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #666;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
-}
-
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
 
     @media (max-width: 600px) {
-      .tutorial-card {
-        padding: 15px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
+      .tutorial-card { padding: 15px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
 
       .feature {
         flex-direction: column;
@@ -164,18 +120,15 @@
         width: 50px;
       }
 
-      .description h3 {
-        font-size: 16px;
-      }
+      .description h3 { font-size: 16px; }
+      .description p { font-size: 14px; }
 
-      .description p {
-        font-size: 14px;
-      }
-
-      .next-button {
+      .next-button, .next1-button {
         width: 100%;
         font-size: 15px;
       }
+
+      .responsive-button-container { text-align: center; }
     }
   </style>
 </head>
@@ -186,143 +139,137 @@
 
     <!-- Page 1 -->
     <div id="page1" class="page active">
-      <h2>Notes:</h2>
-      <ul>
-        
-        <li>First, login with your username and password via "LOGIN" button.</li>
-        <li>Second, enter the description of activities in DAR Details page.</li>
-        <li>You can submit DAR details for a specific date only once.</li>
-        <li>Only today and past 2 days are allowed for selection.</li>
-        <li>Before entering description, select your work using "Select Work" combo box.</li>
-        <li>After filling all 5 work discription boxes, press the "Submit" button.</li>
-        <li>Submit button is visible only after entering at least one work description.</li>
-        <li>Go to the History page to check your submitted activities.</li>
-        <li>Only TL  can approve your activities.</li>
-        <li>To submit another date’s DAR, press "ADD" button.</li>
-        <li>Approved DAR shows green color, unapproved appear in light red color.</li>
-        <li>Press the "EXIT" button to log out from the app.</li>
-      </ul>
-   
-     <h2>குறிப்பு:</h2>
-<ul>
-  <li>முதலில், "LOGIN" பொத்தானை பயன்படுத்தி உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லை கொண்டு உள்நுழைக.</li>
-  <li>பின்னர், DAR விவரங்கள் பக்கத்தில் உங்கள் செயல்பாடுகளின் விளக்கத்தை உள்ளிடவும்.</li>
-  <li>ஒரே தேதிக்கான DAR விவரங்களை நீங்கள் ஒருமுறை மட்டுமே சமர்ப்பிக்க முடியும்.</li>
-  <li>இன்று மற்றும் கடந்த 2 நாட்கள் மட்டும் தேர்வுக்கு அனுமதிக்கப்படுகின்றன.</li>
-  <li>விளக்கம் உள்ளிடும் முன், "Select Work" காம்போ பாக்ஸைப் பயன்படுத்தி உங்கள் வேலைவகையை தேர்வுசெய்யவும்.</li>
-  <li>அனைத்து 5 வேலை விளக்கம் பெட்டிகளை நிரப்பிய பிறகு, "Submit" பொத்தானை அழுத்தவும்.</li>
-
-  <li>ஒரு வேலை விளக்கம் குறைந்தது ஒன்றை உள்ளிடும்போதுதான் "Submit" பொத்தான் காணப்படும்.</li>
-  <li>நீங்கள் சமர்ப்பித்த செயல்பாடுகளை பார்க்க History பக்கத்திற்குச் செல்லவும்.</li>
-  <li>TL மட்டும் தங்களது DAR விவரங்களை ஒப்புதல் அளிக்க முடியும்.</li>
-  <li>மற்றொரு தேதிக்கான DAR ஐ சமர்ப்பிக்க "ADD" பொத்தானை அழுத்தவும்.</li>
-  <li>அங்கீகரிக்கப்பட்ட DAR பச்சை நிறத்தில் காணப்படும், அங்கீகரிக்கப்படாதவை இளஞ்சிவப்பு நிறத்தில் தோன்றும்.</li>
-  <li>பயன்பாட்டிலிருந்து வெளியேற "EXIT" பொத்தானை அழுத்தவும்.</li>
-
-</ul>
-
-
-
       <div class="center-button">
-        <button class="next-button" onclick="showPage(2)">Go to Page2</button>
+        <button class="next-button" id="langToggle" onclick="toggleLanguage()">தமிழ்</button>
       </div>
-         <div class="page-indicator" id="pageIndicator">Page 1 of 2</div>
+
+      <!-- English Notes -->
+      <div id="darEnglish">
+        <h2>DAR NOTES:</h2>
+        <ul>
+          <li>First, log in using your username and password via the "LOGIN" button.</li>
+          <li>Next, you will be redirected to the Selection page.</li>
+          <li>On the Selection page, tap the "DAR" button.</li>
+          <li>Enter the description of activities on the DAR Details page.</li>
+          <li>You can submit DAR details for a specific date only once.</li>
+          <li>Only today and the past 2 days are available for selection.</li>
+          <li>Before entering a description, select your work using the "Select Work" combo box.</li>
+          <li>After filling all 5 work description boxes, press the "Submit" button.</li>
+          <li>The "Submit" button becomes visible only after entering at least one work description.</li>
+          <li>After submitting your details, you will return to the Selection page.</li>
+          <li>On this page, tap the "DAR History" button to view your submission history.</li>
+          <li>Only the Team Leader (TL) can approve your activities.</li>
+          <li>To submit DAR for another date, press the "ADD" button.</li>
+          <li>Approved DAR entries appear in green; unapproved ones appear in light red.</li>
+          <li>Press the "Back" button to return from the DAR History page.</li>
+          <li>Press the "EXIT" button to log out from the app.</li>
+        </ul>
+
+        <h2>ATTENDANCE NOTES:</h2>
+        <ul>
+          <li>First, log in using your username and password via the "LOGIN" button.</li>
+          <li>Next, you will be redirected to the Selection page.</li>
+          <li>On the Selection page, tap the "ATTENDANCE" button.</li>
+          <li>On the Attendance page, take a picture of yourself.</li>
+          <li>The "Submit" button will not work unless you take a picture.</li>
+          <li>After submitting your picture, you will return to the Selection page.</li>
+          <li>Tap the "Attendance History" button to view your history.</li>
+          <li>Only the TL can approve your attendance picture.</li>
+          <li>Approved entries appear green; unapproved ones are light red.</li>
+          <li>Use "Back" to return from Attendance History.</li>
+          <li>Use "EXIT" to log out.</li>
+        </ul>
+      </div>
+
+      <!-- Tamil Notes -->
+      <div id="darTamil" style="display: none;">
+        <h2>டிஏஆர் குறிப்பு:</h2>
+        <ul>
+          <li>முதலில், உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லை பயன்படுத்தி "LOGIN" பொத்தானை அழுத்தி உள்நுழைக.</li>
+          <li>அதற்குப் பிறகு, நீங்கள் தேர்வு பக்கத்திற்கு அழைத்துச் செல்லப்படுவீர்கள்.</li>
+          <li>"DAR" பொத்தானைத் தேர்வு செய்யவும்.</li>
+          <li>விவரங்கள் பக்கத்தில் செயல்களின் விளக்கத்தை உள்ளிடவும்.</li>
+          <li>ஒரே தேதிக்கான DAR ஒரு முறை மட்டுமே சமர்ப்பிக்கலாம்.</li>
+          <li>இன்று மற்றும் கடந்த 2 நாட்கள் மட்டுமே தேர்விற்கு கிடைக்கும்.</li>
+          <li>விளக்கத்திற்கு முன் "Select Work" மூலம் பணியைத் தேர்வு செய்யவும்.</li>
+          <li>5 வேலை விளக்கங்களை பூர்த்தி செய்த பிறகு "Submit" அழுத்தவும்.</li>
+          <li>ஒரு வேலை விளக்கம் இருந்தாலே "Submit" காண்பிக்கப்படும்.</li>
+          <li>சமர்ப்பித்த பிறகு, தேர்வு பக்கத்திற்கு திரும்புவீர்கள்.</li>
+          <li>"DAR History" மூலம் வரலாறு பார்க்கலாம்.</li>
+          <li>TL மட்டுமே அங்கீகரிக்க முடியும்.</li>
+          <li>வேறு தேதிக்கு "ADD" அழுத்தவும்.</li>
+          <li>அங்கீகரிக்கப்பட்டவை பச்சையாக; மீதியவை இலகுரத்த சிவப்பாக.</li>
+          <li>"Back" அழுத்தி வெளியேறவும்.</li>
+          <li>"EXIT" அழுத்தி வெளியேறவும்.</li>
+        </ul>
+
+        <h2>வருகை குறிப்பு:</h2>
+        <ul>
+          <li>முதலில், உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லை பயன்படுத்தி "LOGIN" பொத்தானை அழுத்தி உள்நுழைக.</li>
+          <li>பின், தேர்வு பக்கம் வரும்.</li>
+          <li>"ATTENDANCE" பொத்தானைத் தேர்வு செய்யவும்.</li>
+          <li>வருகைப் பக்கத்தில் புகைப்படம் எடுக்கவும்.</li>
+          <li>புகைப்படம் இல்லாமல் "Submit" செயல்படாது.</li>
+          <li>புகைப்படம் சமர்ப்பித்த பிறகு, தேர்வுக்கு திரும்புவீர்கள்.</li>
+          <li>"Attendance History" பொத்தானை அழுத்தவும்.</li>
+          <li>TL மட்டுமே அங்கீகரிக்க முடியும்.</li>
+          <li>அங்கீகரிக்கப்பட்டவை பச்சை; இல்லாதவை இலகுரத்த சிவப்பு.</li>
+          <li>"Back" அழுத்தி வெளியேறவும்.</li>
+          <li>"EXIT" அழுத்தி வெளியேறவும்.</li>
+        </ul>
+      </div>
+
+      <!-- Right aligned next button -->
+      <div class="responsive-button-container">
+        <button class="next1-button" onclick="showPage(2)">Go to Page 2</button>
+      </div>
+
+      <div class="page-indicator" id="pageIndicator">Page 1 of 2</div>
     </div>
 
     <!-- Page 2 -->
     <div id="page2" class="page">
-      <div class="feature">
-        <img src="WhatsApp.svg.webp" class="icon-img" alt="WhatsApp Icon">
-        <div class="description">
-          <h3>WhatsApp Icon</h3>
-          <p>Tap this icon to send a quick message or chat with support.</p>
-        </div>
-      </div>
+      <div class="feature"><img src="WhatsApp.svg.webp" class="icon-img" alt="WhatsApp Icon"><div class="description"><h3>WhatsApp Icon</h3><p>Tap this icon to send a quick message or chat with support.</p></div></div>
+      <div class="feature"><img src="callimage.png" class="icon-img" alt="Call Icon"><div class="description"><h3>Call Icon</h3><p>Tap this icon to make a call to HR for any queries.</p></div></div>
+      <div class="feature"><img src="add.png" class="icon-img" alt="Add Icon"><div class="description"><h3>Add Button</h3><p>Press this to add a new DAR entry for a different date.</p></div></div>
+      <div class="feature"><img src="approve.png" class="icon-img" alt="Approve Icon"><div class="description"><h3>Approve Button</h3><p>Green shows approved DAR by TL/Admin; red means pending or rejected.</p></div></div>
+      <div class="feature"><img src="exit2.png" class="icon-img" alt="Exit Icon"><div class="description"><h3>Exit Button</h3><p>Click this to log out and close the app.</p></div></div>
+      <div class="feature"><img src="login.png" class="icon-img" alt="Login Icon"><div class="description"><h3>Login Button</h3><p>Used to access the app with your credentials.</p></div></div>
+      <div class="feature"><img src="submit.png" class="icon-img" alt="Submit Icon"><div class="description"><h3>Submit Button</h3><p>Tap this to submit your filled DAR details.</p></div></div>
+      <div class="feature"><img src="combo box.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>Select Work Box</h3><p>Choose the type of work you performed during the day.</p></div></div>
 
-      <div class="feature">
-        <img src="callimage.png" class="icon-img" alt="Call Icon">
-        <div class="description">
-          <h3>Call Icon</h3>
-          <p>Tap this icon to make a call to HR for any queries.</p>
-        </div>
-      </div>
 
-      <div class="feature">
-        <img src="add.png" class="icon-img" alt="Add Icon">
-        <div class="description">
-          <h3>Add Button</h3>
-          <p>Press this to add a new DAR entry for a different date.</p>
-        </div>
-      </div>
 
-      <div class="feature">
-        <img src="approve.png" class="icon-img" alt="Approve Icon">
-        <div class="description">
-          <h3>Approve Button</h3>
-          <p>Green shows approved DAR by TL/Admin; red means pending or rejected.</p>
-        </div>
-      </div>
+ <div class="feature"><img src="attendance.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>Attendance Button</h3><p>Press the button,to take a picture of yourself .</p></div></div>
+ <div class="feature"><img src="attendance history.png"class="icon-img" alt="Select Work Icon"><div class="description"><h3>Attendance History Button</h3><p>see the details of your attendence.</p></div></div>
+ <div class="feature"><img src="dar.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>DAR Button</h3><p>Enter your dar details using the button.</p></div></div>
+  <div class="feature"><img src="DAR history.png" class="icon-img" alt="History Icon"><div class="description"><h3> DAR History Page Icon</h3><p>See the list of all your submitted DAR activities here.</p></div></div>
 
-      <div class="feature">
-        <img src="exit.png" class="icon-img" alt="Exit Icon">
-        <div class="description">
-          <h3>Exit Button</h3>
-          <p>Click this to log out and close the app.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <img src="login.png" class="icon-img" alt="Submit Icon">
-        <div class="description">
-          <h3>Login Button</h3>
-          <p>Used to access the app with your credentials.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <img src="history.png" class="icon-img" alt="History Icon">
-        <div class="description">
-          <h3>History Page Icon</h3>
-          <p>See the list of all your submitted DAR activities here.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <img src="submit.png" class="icon-img" alt="Submit Icon">
-        <div class="description">
-          <h3>Submit Button</h3>
-          <p>Tap this to submit your filled DAR details.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <img src="combo box.png" class="icon-img" alt="Select Work Icon">
-        <div class="description">
-          <h3>Select Work Box</h3>
-          <p>Choose the type of work you performed during the day.</p>
-        </div>
-      </div>
 
       <div class="center-button">
-        <button class="next-button" onclick="showPage(1)">Back</button>
-      </div>                    
+        <button class="next-button" onclick="showPage(1)">Back to Page 1</button>
+      </div>
     </div>
-     
   </div>
 
- <script>
-  function showPage(pageNumber) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.classList.remove('active'));
-    
-    const nextPage = document.getElementById("page" + pageNumber);
-    nextPage.classList.add('active');
-    nextPage.scrollIntoView({ behavior: 'smooth' });
+  <script>
+    function showPage(pageNumber) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      const nextPage = document.getElementById("page" + pageNumber);
+      nextPage.classList.add('active');
+      nextPage.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("pageIndicator").innerText = `Page ${pageNumber} of ${pages.length}`;
+    }
 
-    // Update page indicator
-    document.getElementById("pageIndicator").innerText = `Page ${pageNumber} of ${pages.length}`;
-  }
-</script>
+    let isTamil = false;
+    function toggleLanguage() {
+      isTamil = !isTamil;
+      document.getElementById("darEnglish").style.display = isTamil ? "none" : "block";
+      document.getElementById("darTamil").style.display = isTamil ? "block" : "none";
+      document.getElementById("langToggle").innerText = isTamil ? "English" : " தமிழ்";
+    }
+  </script>
 
 </body>
 </html>
