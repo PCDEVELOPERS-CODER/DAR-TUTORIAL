@@ -103,6 +103,28 @@
       color: #666;
       font-weight: 500;
     }
+    
+    * Responsive video wrapper */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      padding-top: 25px;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      background-color: #000;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     @media (max-width: 600px) {
       .tutorial-card { padding: 15px; }
@@ -143,81 +165,135 @@
         <button class="next-button" id="langToggle" onclick="toggleLanguage()">தமிழ்</button>
       </div>
 
+      <div>
+        <h2>TUTORIAL VIDEO</h2>
+      <video width="640" height="360" controls>
+    <source src="dar-tutorial.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+      </video>
+     </div>
+
       <!-- English Notes -->
       <div id="darEnglish">
-        <h2>DAR NOTES:</h2>
-        <ul>
-          <li>First, log in using your username and password via the "LOGIN" button.</li>
-          <li>Next, you will be redirected to the Selection page.</li>
-          <li>On the Selection page, tap the "DAR" button.</li>
-          <li>Enter the description of activities on the DAR Details page.</li>
-          <li>You can submit DAR details for a specific date only once.</li>
-          <li>Only today and the past 2 days are available for selection.</li>
-          <li>Before entering a description, select your work using the "Select Work" combo box.</li>
-          <li>After filling all 5 work description boxes, press the "Submit" button.</li>
-          <li>The "Submit" button becomes visible only after entering at least one work description.</li>
-          <li>After submitting your details, you will return to the Selection page.</li>
-          <li>On this page, tap the "DAR History" button to view your submission history.</li>
-          <li>Only the Team Leader (TL) can approve your activities.</li>
-          <li>To submit DAR for another date, press the "ADD" button.</li>
-          <li>Approved DAR entries appear in green; unapproved ones appear in light red.</li>
-          <li>Press the "Back" button to return from the DAR History page.</li>
-          <li>Press the "EXIT" button to log out from the app.</li>
+      <h2>LOGIN PAGE:</h2>
+        <ul> 
+          <li>First, log in using your username and password by clicking the "ENTER" button and turn on your location before login a app</li>
         </ul>
 
-        <h2>ATTENDANCE NOTES:</h2>
+        <h2>SELECTION PAGE:</h2>
         <ul>
-          <li>First, log in using your username and password via the "LOGIN" button.</li>
-          <li>Next, you will be redirected to the Selection page.</li>
-          <li>On the Selection page, tap the "ATTENDANCE" button.</li>
-          <li>On the Attendance page, take a picture of yourself.</li>
-          <li>The "Submit" button will not work unless you take a picture.</li>
-          <li>After submitting your picture, you will return to the Selection page.</li>
-          <li>Tap the "Attendance History" button to view your history.</li>
-          <li>Only the TL can approve your attendance picture.</li>
-          <li>Approved entries appear green; unapproved ones are light red.</li>
-          <li>Use "Back" to return from Attendance History.</li>
-          <li>Use "EXIT" to log out.</li>
+        <li>In the selection screen, there are 4 buttons. Click the "DAR Entry" button to enter your DAR details.</li>
+        <li>Click the "DAR History" button to check and analyze your DAR details.</li>
+        <li>Click the "Attendance Entry" button to submit your attendance.</li>
+        <li>Click the "Attendance History" button to check and analyze your attendance entries.</li>
+      </ul>
+
+       <h2>DAR ENTRY PAGE:</h2>
+       <ul>
+        <li>On the DAR Entry page, your name and department are displayed by default.</li>
+        <li>Next, select your In Time and Out Time correctly.</li>
+        <li>Then, select the date for your DAR. You can only select today's date or any of the previous 3 days.</li>
+        <li>Only one date can be selected at a time.</li>
+        <li>There are 5 work description fields, each with a corresponding combo box.</li>
+        <li>A description box will be enabled only after selecting your role in the combo box, based on your department.</li>
+        <li>The "Submit" button will appear only if at least one work description field is filled and the "Tomorrow's Program" is also entered.</li>
+        <li>If these conditions are not satisfied, then the  "Submit" button will not be visible.</li>
         </ul>
-      </div>
+
+       <h2>DAR HISTORY PAGE:</h2>
+       <ul>
+      <li>On DAR history  page, to view your DAR submission history.</li>
+      <li>Once you have submitted your DAR for a specific date, it cannot be edited — you can only view the entries.</li>
+      <li>Only the Team Leader, Immediate Head, Incharge, or Manager can approve your activities.</li>
+      <li>To submit a DAR for another date, press the "ADD" button.</li>
+      <li>Approved DAR entries appear in green, while unapproved entries appear in light red.</li>
+      <li>Press the "Back" button to return to the selection page.</li>
+      </ul>
+
+       <h2>ATTENDANCE ENTRY PAGE:</h2>
+       <UL>
+       <li>On the Attendance Entry page, take a picture of yourself alo there an option to both front and back camera!</li>
+       <li>The "Submit" button will not work unless you take a picture.</li>
+       <li>After submitting your picture, you will return to the Selection page.</li>
+       </UL>
+
+      <h2>ATTENDANCE HISTORY PAGE:</h2>
+<ul> 
+<li>On the Attendance history  page, to view your attendance submission history.</li>  
+<li>Only the Team Leader, Immediate Head, Incharge, or Manager can approve your attendance.</li>
+<li>Approved attendance appears in  green; unapproved attendance are appears in light red.</li>
+</ul>
+
+ <h2>CHANGE PASSWORD PAGE:</h2>
+ <UL>
+<li>On the Change Password page, enter your registered email ID, 
+  your current password, and your new password. Confirm the new password, then click the "Update Password" button.</li>
+<li>Your password will be successfully updated.</li>
+</UL>
+  </div>
 
       <!-- Tamil Notes -->
       <div id="darTamil" style="display: none;">
-        <h2>டிஏஆர் குறிப்பு:</h2>
-        <ul>
-          <li>முதலில், உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லை பயன்படுத்தி "LOGIN" பொத்தானை அழுத்தி உள்நுழைக.</li>
-          <li>அதற்குப் பிறகு, நீங்கள் தேர்வு பக்கத்திற்கு அழைத்துச் செல்லப்படுவீர்கள்.</li>
-          <li>"DAR" பொத்தானைத் தேர்வு செய்யவும்.</li>
-          <li>விவரங்கள் பக்கத்தில் செயல்களின் விளக்கத்தை உள்ளிடவும்.</li>
-          <li>ஒரே தேதிக்கான DAR ஒரு முறை மட்டுமே சமர்ப்பிக்கலாம்.</li>
-          <li>இன்று மற்றும் கடந்த 2 நாட்கள் மட்டுமே தேர்விற்கு கிடைக்கும்.</li>
-          <li>விளக்கத்திற்கு முன் "Select Work" மூலம் பணியைத் தேர்வு செய்யவும்.</li>
-          <li>5 வேலை விளக்கங்களை பூர்த்தி செய்த பிறகு "Submit" அழுத்தவும்.</li>
-          <li>ஒரு வேலை விளக்கம் இருந்தாலே "Submit" காண்பிக்கப்படும்.</li>
-          <li>சமர்ப்பித்த பிறகு, தேர்வு பக்கத்திற்கு திரும்புவீர்கள்.</li>
-          <li>"DAR History" மூலம் வரலாறு பார்க்கலாம்.</li>
-          <li>TL மட்டுமே அங்கீகரிக்க முடியும்.</li>
-          <li>வேறு தேதிக்கு "ADD" அழுத்தவும்.</li>
-          <li>அங்கீகரிக்கப்பட்டவை பச்சையாக; மீதியவை இலகுரத்த சிவப்பாக.</li>
-          <li>"Back" அழுத்தி வெளியேறவும்.</li>
-          <li>"EXIT" அழுத்தி வெளியேறவும்.</li>
-        </ul>
+        <div id="darTamil">
 
-        <h2>வருகை குறிப்பு:</h2>
-        <ul>
-          <li>முதலில், உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லை பயன்படுத்தி "LOGIN" பொத்தானை அழுத்தி உள்நுழைக.</li>
-          <li>பின், தேர்வு பக்கம் வரும்.</li>
-          <li>"ATTENDANCE" பொத்தானைத் தேர்வு செய்யவும்.</li>
-          <li>வருகைப் பக்கத்தில் புகைப்படம் எடுக்கவும்.</li>
-          <li>புகைப்படம் இல்லாமல் "Submit" செயல்படாது.</li>
-          <li>புகைப்படம் சமர்ப்பித்த பிறகு, தேர்வுக்கு திரும்புவீர்கள்.</li>
-          <li>"Attendance History" பொத்தானை அழுத்தவும்.</li>
-          <li>TL மட்டுமே அங்கீகரிக்க முடியும்.</li>
-          <li>அங்கீகரிக்கப்பட்டவை பச்சை; இல்லாதவை இலகுரத்த சிவப்பு.</li>
-          <li>"Back" அழுத்தி வெளியேறவும்.</li>
-          <li>"EXIT" அழுத்தி வெளியேறவும்.</li>
-        </ul>
-      </div>
+  <h2>LOGIN பக்கம்:</h2>
+  <ul>
+    <li>முதலில், உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லைப் பயன்படுத்தி "ENTER" பொத்தானை அழுத்தி உள்நுழைக. உள்நுழைவதற்கு முன் உங்கள் இருப்பிடம் (Location) இயக்கப்பட்டிருக்க வேண்டும்.</li>
+  </ul>
+
+  <h2>SELECTION பக்கம்:</h2>
+  <ul>
+    <li>தேர்வு பக்கத்தில் 4 பொத்தான்கள் உள்ளன. "DAR Entry" பொத்தானை அழுத்தி உங்கள் DAR விவரங்களை உள்ளிடலாம்.</li>
+    <li>"DAR History" பொத்தானை அழுத்தி உங்கள் DAR பதிவுகளைப் பார்க்கவும் பகுப்பாய்வு செய்யவும் முடியும்.</li>
+    <li>"Attendance Entry" பொத்தானை அழுத்தி உங்கள் வருகையைச் சமர்ப்பிக்கலாம்.</li>
+    <li>"Attendance History" பொத்தானை அழுத்தி உங்கள் வருகைப் பதிவுகளைப் பார்க்கவும் பகுப்பாய்வு செய்யவும் முடியும்.</li>
+  </ul>
+
+  <h2>DAR ENTRY பக்கம்:</h2>
+  <ul>
+    <li>DAR உள்ளீடு பக்கத்தில், உங்கள் பெயரும் துறையும் இயல்பாக (default) காட்டப்படும்.</li>
+    <li>பின், உங்கள் உள்ள நேரமும் வெளியேறும் நேரமும் சரியாக தேர்வு செய்யவும்.</li>
+    <li>அதனைத் தொடர்ந்து, உங்கள் DAR-க்கான தேதியைத் தேர்வு செய்யவும். இன்று மற்றும் இதற்கு முந்தைய 3 நாட்கள் மட்டுமே தேர்வு செய்ய இயலும்.</li>
+    <li>ஒரே நேரத்தில் ஒரு தேதியே தேர்வு செய்ய முடியும்.</li>
+    <li>5 வேலை விளக்கம் (Work Description) பாகங்கள் இருக்கும், ஒவ்வொன்றும் ஒரு Combo Box-ஐ உடையதாக இருக்கும்.</li>
+    <li>Combo Box-ல் உங்கள் பங்கு (role)-ஐ தேர்வு செய்த பிறகே, வேலை விளக்கம் பாகம் திறக்கப்படும். இது உங்கள் துறையைப் பொறுத்தது.</li>
+    <li>குறைந்தபட்சம் ஒரு வேலை விளக்கம் மற்றும் நாளைய திட்டம் உள்ளிட்ட பிறகு மட்டுமே "Submit" பொத்தான் தோன்றும்.</li>
+    <li>இந்த நிபந்தனைகள் பூர்த்தியாகாவிட்டால், "Submit" பொத்தான் தோன்றாது.</li>
+  </ul>
+
+  <h2>DAR HISTORY பக்கம்:</h2>
+  <ul>
+    <li>DAR வரலாறு பக்கத்தில், உங்கள் DAR சமர்ப்பித்த வரலாற்றைக் காணலாம்.</li>
+    <li>ஒரு குறிப்பிட்ட தேதிக்கு DAR சமர்ப்பிக்கப்பட்ட பின், அதை திருத்த முடியாது — நீங்கள் அதை பார்க்க மட்டும்  முடியும்.</li>
+    <li>குழுத்தலைவர் / உடனடி மேற்பார்வையாளர் / பொறுப்பாளர் / மேலாளர் ஆகியோரால் மட்டுமே உங்கள் செயல்பாடுகள் அங்கீகரிக்கப்படலாம்.</li>
+    <li>வேறு தேதிக்கான DAR-ஐச் சமர்ப்பிக்க, "ADD" பொத்தானை அழுத்தவும்.</li>
+    <li>அங்கீகரிக்கப்பட்ட DAR பசுமையாக காட்டப்படும்; அங்கீகாரம் பெறாதவை இளஞ்சிவப்பு நிறத்தில் காட்டப்படும்.</li>
+    <li>மீண்டும் தேர்வு பக்கத்திற்குத் திரும்ப "Back" பொத்தானை அழுத்தவும்.</li>
+  </ul>
+
+  <h2>ATTENDANCE ENTRY பக்கம்:</h2>
+  <ul>
+    <li>வருகை உள்ளீடு பக்கத்தில், உங்களுடைய புகைப்படத்தை எடுக்கவும். முன்னும் பின்னுமான கேமராக்களும் பயன்படுத்த வாய்ப்பு உள்ளது.</li>
+    <li>புகைப்படம் எடுக்காவிட்டால் "Submit" பொத்தான் செயல்படாது.</li>
+    <li>புகைப்படத்தை சமர்ப்பித்த பின், நீங்கள் தேர்வு பக்கத்திற்குத் திரும்புவீர்கள்.</li>
+  </ul>
+
+  <h2>ATTENDANCE HISTORY பக்கம்:</h2>
+  <ul>
+    <li>வருகை வரலாறு பக்கத்தில், உங்கள் வருகை சமர்ப்பித்த வரலாற்றைக் காணலாம்.</li>
+    <li>குழுத்தலைவர் / உடனடி மேற்பார்வையாளர் / பொறுப்பாளர் / மேலாளர் ஆகியோரால் மட்டுமே உங்கள் வருகை அங்கீகரிக்கப்படும்.</li>
+    <li>அங்கீகரிக்கப்பட்ட வருகை பசுமையாகக் காணப்படும்; அங்கீகரிக்கப்படாதவை இளஞ்சிவப்பு நிறத்தில் காணப்படும்.</li>
+  </ul>
+
+  <h2>CHANGE PASSWORD பக்கம்:</h2>
+  <ul>
+    <li>கடவுச்சொல் மாற்றும் பக்கத்தில், உங்கள் பதிவு செய்யப்பட்ட மின்னஞ்சல் முகவரி, தற்போதைய கடவுச்சொல் மற்றும் புதிய கடவுச்சொலை உள்ளிடவும். புதிய கடவுச்சொல்லை உறுதிப்படுத்திய பிறகு "Update Password" பொத்தானை அழுத்தவும்.</li>
+    <li>உங்கள் கடவுச்சொல் வெற்றிகரமாக மாற்றப்படும்.</li>
+  </ul>
+</div> 
+ </div>
+
+      
 
       <!-- Right aligned next button -->
       <div class="responsive-button-container">
@@ -242,7 +318,7 @@
 
  <div class="feature"><img src="attendance.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>Attendance Button</h3><p>Press the button,to take a picture of yourself .</p></div></div>
  <div class="feature"><img src="attendance history.png"class="icon-img" alt="Select Work Icon"><div class="description"><h3>Attendance History Button</h3><p>see the details of your attendence.</p></div></div>
- <div class="feature"><img src="DAR.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>DAR Button</h3><p>Enter your dar details using the button.</p></div></div>
+ <div class="feature"><img src="dar.png" class="icon-img" alt="Select Work Icon"><div class="description"><h3>DAR Button</h3><p>Enter your dar details using the button.</p></div></div>
   <div class="feature"><img src="DAR history.png" class="icon-img" alt="History Icon"><div class="description"><h3> DAR History Page Icon</h3><p>See the list of all your submitted DAR activities here.</p></div></div>
 
 
@@ -271,5 +347,5 @@
     }
   </script>
 
-</body>
+           </body>
 </html>
