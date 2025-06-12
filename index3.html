@@ -11,6 +11,7 @@
       background: linear-gradient(to right, #f0f4f8, #e6ecf0);
       padding: 20px;
       margin: 0;
+     box-sizing: border-box;
     }
 
     .tutorial-card {
@@ -103,23 +104,24 @@
       color: #666;
       font-weight: 500;
     }
-    
-    * Responsive video wrapper */
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 640px;
-      margin: auto;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    }
 
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+  .video-container {
+  position: relative;
+  width: 100%;            /* Full width for mobile responsiveness */
+  max-width: 500px;       /* Prevents it from growing too large on desktops */
+  margin: auto;
+  padding-top: 56.25%;    /* 16:9 Aspect Ratio */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
     @media (max-width: 600px) {
       .tutorial-card { padding: 15px; }
       h1 { font-size: 24px; }
@@ -146,6 +148,18 @@
 
       .responsive-button-container { text-align: center; }
     }
+    @media (min-width: 768px) {
+  .video-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-container {
+    width: 60%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -160,7 +174,7 @@
       </div>
 
       <div>
-        <h2>TUTORIAL VIDEO📽️</h2>
+        <h2>TUTORIAL VIDEO</h2>
       <video width="640" height="360" controls>
     <source src="dar-tutorial.mp4" type="video/mp4">
     Your browser does not support the video tag.
